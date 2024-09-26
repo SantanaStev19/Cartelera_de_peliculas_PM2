@@ -1,0 +1,82 @@
+body{
+    background-color: black;
+}
+header{
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+}
+#navBar{
+   background-color: rgb(104, 104, 104);    
+}
+#navegacion{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+#navegacion a{
+    text-align: center;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: bold;
+    padding: 0.5em;
+}
+#navegacion a:hover{
+    background-color: #ffffff;
+    color: black;
+    border-radius: 0.5em;
+}
+#mainTitle{
+  font-size: 3em;  
+  color: #ffffff;
+}
+#mainConten{
+    background-color: rgb(104, 104, 104);
+    border-radius: 1em;
+    margin: 1em;
+    padding: 2em;
+}
+#mainConten h2{
+    font-size: 2em;
+    text-align: center;
+    padding: 0.5em;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.movieCard{
+    background-color: rgb(155, 154, 154);
+    width: 20em;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    padding: 2em;
+}
+.movieCard:hover{
+    transform: scale(1.1);
+}
+.cardTitle{
+    font-size: 1.5em;
+}
+.cardImg{
+    border-radius: 15px;
+}
+.tag{
+    border-radius: 1em;
+    background-color: black;
+    color: #ffffff;
+    padding: 0.5em;
+}
+#movieContainer{
+    margin: 1em;
+}
+.movies{
+    margin: 1em;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 0.5rem;
+    justify-content: space-around;
+}
+
