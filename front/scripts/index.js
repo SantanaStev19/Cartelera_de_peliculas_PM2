@@ -1,20 +1,14 @@
+const URL = "https://students-api.up.railway.app/movies";
+
+const fetchdata = () => {
+    $.get(URL,(data) => {
+        renderCards(data);
+    }).fail(() => {
+        alert("Error al obtener el listado de peliculas");
+    });
+};
 
 
-/*        <div class="movieCard">
-            <h3 class="cardTitle">Title</h3>
-            <img
-              class="cardImg" 
-             src="https://m.media-amazon.com/images/M/MV5BNjM0NTc0NzItM2FlYS00YzEwLWE0YmUtNTA2ZWIzODc2OTgxXkEyXkFqcGdeQXVyNTgwNzIyNzg@._V1_SX300.jpg" 
-            />
-            <div class="cardTags">
-              <span class="tag">Genero 1</span>
-              <span class="tag">Genero 1</span>
-              <span class="tag">Genero 1</span>
-            </div>
-            <div class="cardRate">
-              <span>7.8</span>
-            </div>
-        </div> */
 
 const createCard = (movie) => {
     const card = document.createElement("div");
@@ -61,6 +55,5 @@ const renderCards = (data) => {
     });
 
 };    
-console.log(tempData)
 
-renderCards(tempData);
+fetchdata();
