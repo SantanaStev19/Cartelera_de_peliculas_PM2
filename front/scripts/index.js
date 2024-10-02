@@ -56,4 +56,6 @@ const renderCards = (data) => {
 
 };    
 
+// renderCards();
+
 fetchdata();

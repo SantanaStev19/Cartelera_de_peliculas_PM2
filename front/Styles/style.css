@@ -1,10 +1,15 @@
 body{
     background-color: black;
+    font-family: "Krub", system-ui;
+}
+h2{
+    color: #ffffff;
 }
 header{
     display: flex;
     justify-content: center;
     padding: 1em;
+    font-weight: bold;
 }
 #navBar{
    background-color: rgb(104, 104, 104);    
@@ -16,27 +21,30 @@ header{
 }
 #navegacion a{
     text-align: center;
-    color: #ffffff;
+    color: #000000;
     text-decoration: none;
     font-size: 1em;
     font-weight: bold;
     padding: 0.5em;
 }
 #navegacion a:hover{
-    background-color: #ffffff;
-    color: black;
+    background-color: #000000;
+    color: rgb(255, 255, 255);
     border-radius: 0.5em;
 }
 #mainTitle{
   font-size: 3em;  
   color: #ffffff;
 }
+
 #mainConten{
     background-color: rgb(104, 104, 104);
     border-radius: 1em;
     margin: 1em;
-    padding: 2em;
+    padding: 0.5em;
+    
 }
+
 #mainConten h2{
     font-size: 2em;
     text-align: center;
@@ -58,10 +66,11 @@ header{
     transform: scale(1.1);
 }
 .cardTitle{
-    font-size: 1.5em;
+    font-size: 1em;
+    font-weight: bold;
 }
 .cardImg{
-    border-radius: 15px;
+    border-radius: 10px;
 }
 .tag{
     border-radius: 1em;
@@ -72,11 +81,9 @@ header{
 #movieContainer{
     margin: 1em;
 }
-.movies{
-    margin: 1em;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 0.5rem;
-    justify-content: space-around;
+span{
+    font-size: small;
 }
+
+
 
