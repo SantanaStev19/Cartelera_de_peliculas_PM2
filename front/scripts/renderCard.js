@@ -1,4 +1,4 @@
-const createCard = require("./createCard");
+const { createCard } = require("./createCard")
 
 const renderCards = (data) => {
     const cards = data.map(createCard);
@@ -9,4 +9,6 @@ const renderCards = (data) => {
     });
 };
 
-module.exports = renderCards;
+module.exports = {
+    renderCards,
+}

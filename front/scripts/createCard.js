@@ -34,4 +34,6 @@ const createCard = (movie) => {
 
 }
 
-module.exports = createCard;
+module.exports = {
+    createCard
+}
