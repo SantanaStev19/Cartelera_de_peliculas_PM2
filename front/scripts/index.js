@@ -1,5 +1,5 @@
 const { fetchdata } = require("./fetchdata");
 
-const URL = "https://students-api.up.railway.app/movies";
+const URL = "http://localhost:3000/movies";
 
 fetchdata(URL);
