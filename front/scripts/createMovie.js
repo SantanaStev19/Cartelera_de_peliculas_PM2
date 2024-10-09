@@ -1,3 +1,5 @@
+const axios = require("axios");
+
 let titleInput, yearInput, directorInput, durationInput, genreInput, posterInput, rateInput;
 
 const extractInputs = () => {
@@ -56,10 +58,16 @@ const createMovie = (event) => {
         poster: posterInput.value,
     }
 
+    axios.post("http://localhost:3000/movies", movie)
+        .then(({ data }) => {
+            alert(data.message)
+            clearInputs();
+    })
+    .catch((err) => {
+        alert(err.message)
+        console.error(err);
+    })
     clearInputs();
-
-    console.log(movie);
-
     return movie;
 }
 

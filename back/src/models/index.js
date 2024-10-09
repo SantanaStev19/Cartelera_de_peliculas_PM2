@@ -21,12 +21,6 @@ const movieSchema = new Schema({
     },
     duration: {
         type: String,
-        validate:{
-            validator: function(v){
-                return /^\d{1,2}h\s\s{1,2}min$/.test(v)
-            },
-            message: (props) => `${props.value} no corresponde con un valor de tipo XXh XXmin`,
-        },
         required: [true, "La duracion es requerida"],
     },
     genre: {
@@ -39,13 +33,6 @@ const movieSchema = new Schema({
     },
     poster: {
         type: String,
-        validate:{
-            validator: function(v){
-                return /https?\/\/.+\.(png|jpe?g|gif|webpt)$/.test(v)
-            },
-            message: (props) => 
-                `${props.value} no corresponde con un valor de tipo Url`,
-        },
         required: [true, "La poster es requerida"],
 
     },

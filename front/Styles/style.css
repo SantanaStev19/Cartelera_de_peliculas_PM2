@@ -88,10 +88,7 @@ header{
     color: #ffffff;
     padding: 0.5em;
 }
-#movieContainer{
-    margin: 1em;
-    margin-top: 0.2em;
-}
+
 span{
     font-size: small;
 }
@@ -109,6 +106,14 @@ strong{
 }
 .CreateMovie{
     padding: 2em;
+}
+#moviesContainer{
+    padding: 3em;
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2em;
+    justify-content:space-evenly;
 }
 
 
