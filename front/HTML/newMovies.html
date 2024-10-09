@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crear Pelicula</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../Styles/reset.css">
+    <link rel="stylesheet" href="../Styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  </head>
+  <body >
+    <header>
+      <h1 id="mainTitle">PM2 - MOVIE</h1>
+    </header>
+    <div id="navBar">
+      <nav id="navegacion" class="navbar navbar-expand-lg bg-body-tertiary bg-secondary">
+        <a href="../index.html">Inicio</a>   
+        <a href="./cine.html">Historia del Cine</a>   
+        <a href="./streaming.html">Streaming</a> 
+        <a href="./newMovies.html">Formulario de Peliculas</a>  
+      </nav>
+    </div>
+
+    <main id="mainConten">
+      <section class="p-1">
+        <h2>Ingresa tu Pelicula</h2>
+      </section>
+      <form id="formCreateMovie" class="CreateMovie" novalidate>
+        <div class="form-group">
+            <label for="title"><strong>Titulo</strong></label>
+            <input 
+                type="text" 
+                class="form-control" 
+                id="title" 
+                placeholder="Titulo de la Pelicula"
+                required
+                minlength="2"
+                maxlength="100" />                
+                <div class="valid-feedback">Todo ok</div>
+                <div class="invalid-feedback">
+                    El titulo debe tener entre 2 y 100 caracteres
+                </div>
+        </div>
+        <br>
+        <div class="row">           
+            <div class="form-group col">
+                <label for="year"><strong>Año de Estreno</strong></label>
+                <input 
+                    type="number" 
+                    class="form-control" 
+                    id="year" 
+                    placeholder="Año de Estreno"
+                    required
+                    minlength="1900"
+                    maxlength="2030" />                
+                    <div class="valid-feedback">Todo ok</div>
+                    <div class="invalid-feedback">    
+                        El año de la pelicula debe ser despues del 1900
+                    </div>   
+            </div>
+            <div class="form-group col">
+                <label for="duration"><strong>Duracion de la Pelicula</strong></label>
+                <input 
+                    type="text" 
+                    class="form-control" 
+                    id="duration" 
+                    placeholder="Ejemplo: 2h 30min"
+                    required
+                    pattern="^\d{1,2}h\s\d{1,2}min$" />              
+                    <div class="valid-feedback">Todo ok</div>
+                    <div class="invalid-feedback">    
+                        La duracion debe tener el formato XXh XXmin
+                    </div>   
+            </div>
+        </div>    
+        <br>
+        <div class="form-group">
+                <label for="Director"><strong>Director</strong></label>
+                <input 
+                    type="text" 
+                    class="form-control" 
+                    id="director" 
+                    placeholder="Nombre del Director"
+                    required
+                    minlength="2"
+                    maxlength="100" />                
+                    <div class="valid-feedback">Todo ok</div>
+                    <div class="invalid-feedback">
+                        El titulo debe tener entre 2 y 100 caracteres
+                    </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="form-group col">
+                <label for="genre"><strong>Genero</strong></label>
+                <select name="genre" id="genre" class="form-select" required>
+                    <option value="">Seleccionar Genero</option>
+                    <option value="Action">Accion</option>
+                    <option value="Aventure">Aventura</option>
+                    <option value="Comedy">Comedia</option>
+                    <option value="Drama">Drama</option>
+                    <option value="Terror">Terror</option>
+                </select>
+            </div>
+            <div class="form-group col">
+                <label for="rate">Calificacion</label>
+                <input 
+                    type="number"
+                    step="0.1"
+                    class="form-control"
+                    id="rate"
+                    placeholder="Ejemplo: 7.7"
+                    required
+                    min="0"
+                    max="10" />
+                    <div class="invalid-feedback">
+                        la Calificacion debe ser un numero entre 0 y 10
+                    </div>
+            </div>
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="poster"><strong>Poster</strong></label>
+            <input 
+                type="url" 
+                class="form-control" 
+                id="poster" 
+                placeholder="Url del poster de la pelicula"
+                pattern="https?://.+\.(png|jpe?g|gif|webpt)$"
+                required />                
+                <div class="invalid-feedback">
+                    por favor, ingrese una URL valida para el poster
+                </div>
+        </div>
+        <br>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <button type="submit" class="send-button btn btn-secondary me-md-2 fw-bold" id="submit">Enviar</button>
+            <button type="button" class="clear-button btn btn-secondary fw-bold"rk id="clear">Limpiar Formulario</button>
+        </div>  
+      </form>
+      
+    </main>
+
+    <!-- <script src="./scripts/tempData.js"></script> -->
+    <script src="../public/bundle.js"></script>
+    <script 
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" 
+    crossorigin="anonymous">
+    </script>
+  </body>
+</html>

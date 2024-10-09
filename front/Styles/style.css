@@ -44,7 +44,17 @@ header{
     padding: 0.5em;
     
 }
-
+#mainConten2{
+    background-color: rgb(175, 174, 174);
+    border-radius: 1em;
+    margin: 1em;
+    padding: 1em;
+    color:#000000;
+    font-weight: bold;  
+}
+#mainConten2 p{
+    padding: 1em;
+}
 #mainConten h2{
     font-size: 2em;
     text-align: center;
@@ -80,9 +90,25 @@ header{
 }
 #movieContainer{
     margin: 1em;
+    margin-top: 0.2em;
 }
 span{
     font-size: small;
+}
+strong{
+    font-weight:bold;
+}
+#mainConten2 .col{
+    background-color: #000000;
+    margin: 1em;
+    padding: 1em;
+    border-radius: 1em;
+    color: #ffffff;
+    text-align: start;
+    font-weight: 400;
+}
+.CreateMovie{
+    padding: 2em;
 }
 
 
