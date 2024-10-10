@@ -5,7 +5,7 @@ const { getAllMoviesController,
 const { validationDataMovie } = require("../middlewares/index.js")
 
 router.get("/movies", getAllMoviesController)
-router.post("/movies", validationDataMovie, postMovieController)
+router.post("/movies", postMovieController)
 
 module.exports = {
     router
